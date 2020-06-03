@@ -68,7 +68,7 @@ const resultDisplay = document.querySelector('#result')
   			colImg.setAttribute('data-id', i)
   			colImg.setAttribute('src','images/blank.png')
   			col.style = 'margin:0px; padding:0px;border:2px solid #000;';
-  			colImg.style = 'width:100%;min-height:70px;height: 100%';
+  			colImg.style = 'width:100%;min-height:150px;height: 100%';
   			therow.appendChild(col)
   			col.appendChild(colImg)
   			colImg.addEventListener('click',flipCard)
