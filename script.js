@@ -65,7 +65,7 @@ function openCards() {
   for (var i = 0; i < cardArray.length; i++) {
      cardstr += `
                <div class="col-md-3 col-3" style="margin:0px; padding:0px;border:2px solid #000;">
-                <img src='${cardArray[i].img}' style="width:100%;min-height:150px;height: 100%">
+                <img src='${cardArray[i].img}' style="width:100%;min-height:140px;height: 100%">
               </div> 
               `;
   }
