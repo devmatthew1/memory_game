@@ -58,9 +58,23 @@ var cardsChosenId = []
 const cardsWon = []
 var therow = document.getElementById('myrow');
 const resultDisplay = document.querySelector('#result')
-
-  function createCards() {
-  		
+const startBtn = document.getElementById('start-btn')
+var cardstr = " ";
+function openCards() {
+  
+  for (var i = 0; i < cardArray.length; i++) {
+     cardstr += `
+               <div class="col-md-3 col-3" style="margin:0px; padding:0px;border:2px solid #000;">
+                <img src='${cardArray[i].img}' style="width:100%;min-height:150px;height: 100%">
+              </div> 
+              `;
+  }
+  therow.innerHTML = cardstr;
+  startBtn.addEventListener('click',startGame)           
+}
+  function startGame() {
+  		therow.innerHTML = " ";
+      startBtn.style.display = 'none';
   		for (var i = 0; i < cardArray.length; i++) {
   			var col = document.createElement('div')
   			var colImg = document.createElement('img')
@@ -123,6 +137,6 @@ const resultDisplay = document.querySelector('#result')
   }
 
 
-createCards();
+openCards();
 })
 
